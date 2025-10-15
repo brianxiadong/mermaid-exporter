@@ -1,6 +1,8 @@
 # Mermaid 在线图表导出器
 
-一个基于 Next.js 的在线 Mermaid 图表编辑和导出工具，支持实时预览、多主题切换和 SVG/PNG 导出功能。
+一个基于 Next.js 的在线 Mermaid 图表编辑和导出工具，支持实时预览、多主题切换和 SVG 导出功能。
+
+🌐 **在线演示**: [https://traemermaid-exporternnfo-brianxiadong-brianxiadongs-projects.vercel.app](https://traemermaid-exporternnfo-brianxiadong-brianxiadongs-projects.vercel.app)
 
 ## 功能特性
 
@@ -8,26 +10,28 @@
 - 🎯 **多种图表类型** - 支持流程图、时序图、类图、状态图、甘特图、饼图等
 - 🌈 **多主题支持** - 内置多种 Mermaid 主题，满足不同设计需求
 - 📱 **响应式设计** - 完美适配桌面端和移动端
-- 💾 **多格式导出** - 支持 SVG 和 PNG 格式导出
+- 💾 **SVG 导出** - 支持高质量 SVG 格式导出
 - 📚 **示例模板** - 提供丰富的图表模板，快速上手
 - 🚀 **零配置部署** - 一键部署到 Vercel
+- ⚡ **纯前端实现** - 无需服务端，完全在浏览器中运行
 
 ## 技术栈
 
-- **前端框架**: Next.js 13+ (App Router)
-- **开发语言**: TypeScript
-- **样式框架**: Tailwind CSS
-- **代码编辑器**: Monaco Editor
-- **图表渲染**: Mermaid.js
-- **图标库**: Lucide React
+- **前端框架**: Next.js 15.5.5 (App Router)
+- **开发语言**: TypeScript 5+
+- **样式框架**: Tailwind CSS 4
+- **代码编辑器**: Monaco Editor 0.54.0
+- **图表渲染**: Mermaid.js 11.12.0
+- **图标库**: Lucide React 0.545.0
+- **运行时**: React 19.1.0
 - **部署平台**: Vercel
 
 ## 快速开始
 
 ### 环境要求
 
-- Node.js 16.8+ 
-- pnpm 或 npm
+- Node.js 16.20.2+ 
+- pnpm (推荐) 或 npm
 
 ### 安装依赖
 
@@ -66,21 +70,18 @@ pnpm start
 ```
 src/
 ├── app/                    # Next.js App Router
-│   ├── api/               # API 路由
-│   │   └── export/        # 导出 API
 │   ├── editor/            # 编辑器页面
 │   ├── help/              # 帮助页面
 │   ├── globals.css        # 全局样式
 │   ├── layout.tsx         # 根布局
 │   └── page.tsx           # 首页
-├── components/            # React 组件
-│   ├── ExampleTemplates.tsx
-│   ├── ExportPanel.tsx
-│   ├── MermaidEditor.tsx
-│   ├── MermaidPreview.tsx
-│   ├── Navigation.tsx
-│   └── ThemeSelector.tsx
-└── lib/                   # 工具函数
+└── components/            # React 组件
+    ├── ExampleTemplates.tsx
+    ├── ExportPanel.tsx
+    ├── MermaidEditor.tsx
+    ├── MermaidPreview.tsx
+    ├── Navigation.tsx
+    └── ThemeSelector.tsx
 ```
 
 ## 部署到 Vercel
@@ -101,13 +102,9 @@ vercel
 2. 在 [Vercel](https://vercel.com) 导入项目
 3. 自动部署完成
 
-### 环境变量配置
+### 部署配置
 
-复制 `.env.example` 为 `.env.local` 并配置相应变量：
-
-```bash
-cp .env.example .env.local
-```
+项目采用纯前端架构，无需额外的环境变量配置，可直接部署到 Vercel。
 
 ## 使用指南
 
@@ -117,7 +114,7 @@ cp .env.example .env.local
 2. **实时预览** - 右侧自动显示图表预览
 3. **切换主题** - 使用主题选择器更换图表样式
 4. **选择模板** - 从示例模板快速开始
-5. **导出图表** - 选择格式和尺寸导出图片
+5. **导出图表** - 设置尺寸和背景色导出 SVG 图片
 
 ### 支持的图表类型
 
@@ -172,7 +169,7 @@ const templates = [
 A: 检查 Mermaid 语法是否正确，参考帮助页面的语法指南。
 
 ### Q: 导出的图片质量不佳？
-A: 尝试增加导出尺寸，或选择 SVG 格式获得矢量图形。
+A: 尝试增加导出尺寸，SVG 格式提供无损的矢量图形质量。
 
 ### Q: 移动端编辑体验不佳？
 A: 建议在桌面端进行复杂编辑，移动端主要用于查看和简单修改。
