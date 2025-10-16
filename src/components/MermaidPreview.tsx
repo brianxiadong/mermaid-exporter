@@ -91,9 +91,9 @@ export function MermaidPreview({ code, theme }: MermaidPreviewProps) {
   }, [code, theme]);
 
   return (
-    <div className="h-96 relative">
+    <div className="min-h-96 relative">
       {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-50 bg-opacity-75 z-10">
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-50 bg-opacity-75 z-10 min-h-96">
           <div className="flex items-center gap-2 text-gray-600">
             <Loader2 className="w-5 h-5 animate-spin" />
             <span>渲染中...</span>
@@ -102,7 +102,7 @@ export function MermaidPreview({ code, theme }: MermaidPreviewProps) {
       )}
 
       {error && (
-        <div className="absolute inset-0 flex items-center justify-center bg-red-50 z-10">
+        <div className="absolute inset-0 flex items-center justify-center bg-red-50 z-10 min-h-96">
           <div className="flex items-center gap-2 text-red-600 bg-white px-4 py-2 rounded-lg shadow-sm border border-red-200">
             <AlertCircle className="w-5 h-5" />
             <div>
@@ -115,12 +115,12 @@ export function MermaidPreview({ code, theme }: MermaidPreviewProps) {
 
       <div
         ref={containerRef}
-        className="w-full h-full overflow-auto p-4 flex items-center justify-center"
-        style={{ minHeight: '100%' }}
+        className="w-full overflow-auto p-4 flex items-center justify-center"
+        style={{ minHeight: '24rem' }}
       />
 
       {!code.trim() && !isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center text-gray-400">
+        <div className="absolute inset-0 flex items-center justify-center text-gray-400 min-h-96">
           <div className="text-center">
             <div className="text-lg font-medium mb-2">开始编写 Mermaid 代码</div>
             <div className="text-sm">在左侧编辑器中输入代码，这里将显示实时预览</div>
