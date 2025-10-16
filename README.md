@@ -2,7 +2,7 @@
 
 一个基于 Next.js 的在线 Mermaid 图表编辑和导出工具，支持实时预览、多主题切换和 SVG 导出功能。
 
-🌐 **在线演示**: [https://traemermaid-exporternnfo-brianxiadong-brianxiadongs-projects.vercel.app](https://traemermaid-exporternnfo-brianxiadong-brianxiadongs-projects.vercel.app)
+🌐 **在线演示**: [https://mermaid-exporter.vercel.app/](https://mermaid-exporter.vercel.app/)
 
 ## 功能特性
 

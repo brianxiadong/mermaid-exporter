@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FileText, Download, Palette, Smartphone, ArrowRight } from 'lucide-react';
+import { FileText, Download, Palette, Smartphone, ArrowRight, Github, Mail, User } from 'lucide-react';
 
 export default function Home() {
   const features = [
@@ -143,6 +143,44 @@ export default function Home() {
               </pre>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Advertisement Banner */}
+      <div className="mt-16 bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl border border-gray-200 p-8">
+        <div className="text-center">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            关于项目
+          </h3>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-gray-700">
+            <div className="flex items-center gap-2">
+              <User className="w-5 h-5 text-blue-600" />
+              <span className="font-medium">作者：brian</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Mail className="w-5 h-5 text-blue-600" />
+              <a 
+                href="mailto:xiadong1234ac@163.com" 
+                className="hover:text-blue-600 transition-colors"
+              >
+                xiadong1234ac@163.com
+              </a>
+            </div>
+            <div className="flex items-center gap-2">
+              <Github className="w-5 h-5 text-blue-600" />
+              <a 
+                href="https://github.com/brianxiadong/mermaid-exporter" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-blue-600 transition-colors font-medium"
+              >
+                GitHub 仓库
+              </a>
+            </div>
+          </div>
+          <p className="text-sm text-gray-500 mt-4">
+            如果这个工具对你有帮助，欢迎给项目点个 ⭐ Star！
+          </p>
         </div>
       </div>
     </div>
