@@ -115,7 +115,7 @@ export function MermaidPreview({ code, theme }: MermaidPreviewProps) {
 
       <div
         ref={containerRef}
-        className="w-full overflow-auto p-4 flex items-center justify-center"
+        className="w-full overflow-auto p-4"
         style={{ minHeight: '24rem' }}
       />
 
